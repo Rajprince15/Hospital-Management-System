@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Appoi.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="banner"></div>
+      <nav>
+        <h1>Elite Care</h1>
+        <button class="nav-toggle">
+          <i class="fa fa-bars"></i>
+        </button>
+        <ul class="ul">
+          <li><a href="D:\HSP\Hospital Management System\webpage\Main.html#home">Home</a></li>
+          <li><a href="D:\HSP\Hospital Management System\webpage\Main.html#about">About</a></li>
+          <li><a href="D:\HSP\Hospital Management System\webpage\Main.html#facilities">Services</a></li>
+          <li><a href="D:\HSP\Hospital Management System\webpage\Main.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="head">
+        <h1>Book Appointment</h1>
+      </div>
+    </header>
+    <main>
+      <div class="container1">
+        <h5>with assec to</h5>
+        <h2>24 hour</h2>
+        <h3>Emergency Assistance</h3>
+        <p>
+          An emergency number is available, through which you can summon an
+          ambulance service from your home, provided by the Best hospital in
+          India.
+        </p>
+        <div class="btn">
+          <button>Have any Query call now</button>
+          <button>0222-342-322</button>
+        </div>
+      </div>
+      <div class="container2">
+        <h4>Need emergency Assistance</h4>
+        <h1>Book an Appointment</h1>
+        <form>
+          <div class="row1">
+            <input type="text" placeholder="ID" required />
+            <input type="email" placeholder="Email*" required />
+            <input type="date" required />
+          </div>
+          <select required>
+            <option>Select Deprt*</option>
+            <option>Urology</option>
+            <option>Neurosurgery</option>
+            <option>Gastroenterology</option>
+            <option>Gynaecology & Obstetrics</option>
+            <option>Ear Nose Throat</option>
+            <option>Cardiology</option>
+          </select>
+          <button>submit</button>
+          <p>Don't have ID? <a href="login.html">Sign up</a></p>
+        </form>
+      </div>
+    </main>
+    <div class="slider"></div>
+    <footer>
+      <div class="footer">
+        <div class="slide">
+          <img
+            src="https://jaipurhospital.in/wp-content/uploads/2022/06/cropped-Jaipur-Hospital-e1654852479656.webp"
+            alt="img"
+          />
+          <p>
+            Elite Care Hospital has steadily grown to provide such care to not just
+            the local community, but also the international patients
+          </p>
+        </div>
+        <div class="slide">
+          <h3>UseFull link</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="slide">
+          <h3>Our Department</h3>
+          <ul>
+            <li><a href="#">Urology</a></li>
+            <li><a href="#">Neurosurgery</a></li>
+            <li><a href="#">Gastroenterology</a></li>
+            <li><a href="#">Gynaecology & Obstetrics</a></li>
+          </ul>
+        </div>
+        <div class="slide">
+          <h3>Contact Us</h3>
+          <ul>
+            <li>
+              <address>
+                Mahaveer Nagar S16A, S17, Tonk Rd, Gopal Pura Mode, Jaipur,
+                Rajasthan 302018
+              </address>
+            </li>
+            <li><a href="#">+91 9876543210</a></li>
+            <li><a href="maileto:#">Email@jh.in</a></li>
+            <li style="text-align: center;">2021 Your Company. All rights reserved.</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const navMenu = document.querySelector(".ul");
+
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

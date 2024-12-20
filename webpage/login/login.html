@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Responsive Login and Signup Form </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="login.css">
+
+  <!-- Boxicons CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <nav>
+    <img src="https://i.pinimg.com/564x/d2/9e/b9/d29eb99cbe1e1e181a7551ec6416743e.jpg" alt="img"
+      style="mix-blend-mode: multiply; max-width: 10px;" />
+    Elite Care
+    <button class="nav-toggle">
+      <i class="fa fa-bars"></i>
+    </button>
+    <ul class="ul">
+      <li><a href="C:\Users\soury\OneDrive\Desktop\website/Main.html">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <section class="container forms">
+    <div class="form login">
+      <div class="form-content">
+        <header>Doctor Login</header>
+        <form action="#" id="loginForm">
+          <div class="field input-field">
+            <input type="email" placeholder="ID" class="input" id="loginEmail">
+            <span class="error" id="loginEmailError"></span>
+          </div>
+
+          <div class="field input-field">
+            <input type="password" placeholder="Password" class="password" id="loginPassword">
+            <i class='bx bx-hide eye-icon'></i>
+            <span class="error" id="loginPasswordError"></span>
+          </div>
+
+          <div class="field button-field">
+            <a href="Main.html"><button type="submit">Login</button></a>
+          </div>
+        </form>
+
+        <div class="form-link">
+          <span>For patient <a href="#" class="link signup-link">Signin</a></span>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="media-options">
+        <a href="#" class="field facebook">
+          <i class='bx bxl-facebook facebook-icon'></i>
+          <span>Login with Facebook</span>
+        </a>
+      </div>
+
+      <div class="media-options">
+        <a href="#" class="field google">
+          <i class='bx bxl-google' id="google"></i>
+          <span>Login with Google</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Signup Form -->
+
+    <div class="form signup">
+      <div class="form-content">
+        <header>Patient Signin</header>
+        <form action="#" id="signupForm">
+          <div class="field input-field">
+            <input type="email" placeholder="Email" class="input" id="signupEmail">
+            <span class="error" id="signupEmailError"></span>
+          </div>
+
+          <div class="field input-field">
+            <input type="password" placeholder="Create password" class="password" id="signupPassword">
+            <span class="error" id="signupPasswordError"></span>
+          </div>
+
+          <div class="field input-field">
+            <input type="password" placeholder="Confirm password" class="password" id="confirmPassword">
+            <i class='bx bx-hide eye-icon'></i>
+            <span class="error" id="confirmPasswordError"></span>
+          </div>
+
+          <div class="field button-field">
+            <a href="Main.html"><button>Signup</button></a>
+          </div>
+        </form>
+
+        <div class="form-link">
+          <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="media-options">
+        <a href="#" class="field facebook">
+          <i class='bx bxl-facebook facebook-icon'></i>
+          <span>Login with Facebook</span>
+        </a>
+      </div>
+
+      <div class="media-options">
+        <a href="#" class="field google">
+          <i class='bx bxl-google' id="google"></i>
+          <span>Login with Google</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+  <footer>
+    <div class="footer">
+      <div class="slide">
+        <h1>Elite Care</h1>
+        <p>
+          Elite Care Hospital has steadily grown to provide such care to not just
+          the local community, but also the international patients
+        </p>
+      </div>
+      <div class="slide">
+        <h3>UseFull link</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="slide">
+        <h3>Our Department</h3>
+        <ul>
+          <li><a href="#">Urology</a></li>
+          <li><a href="#">Neurosurgery</a></li>
+          <li><a href="#">Gastroenterology</a></li>
+          <li><a href="#">Gynaecology & Obstetrics</a></li>
+        </ul>
+      </div>
+      <div class="slide">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>
+            <address>
+              Mahaveer Nagar S16A, S17, Tonk Rd, Gopal Pura Mode, Jaipur,
+              Rajasthan 302018
+            </address>
+          </li>
+          <li><a href="#">+91 9876543210</a></li>
+          <li><a href="maileto:#">Email@jh.in</a></li>
+          <li style="text-align: center;">2021 Your Company. All rights reserved.</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector(".nav-toggle");
+    const navMenu = document.querySelector(".ul");
+
+    navToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  </script>
+
+  <!-- JavaScript -->
+  <script src="validation.js"></script>
+</body>
+
+</html>
