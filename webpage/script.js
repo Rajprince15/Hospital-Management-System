@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+
     function validateForm() {
         let isValid = true;
         const requiredFields = appointmentForm.querySelectorAll('[required]');
