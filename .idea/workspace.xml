@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpage/Appoi/Appoi.html" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/Appoi/Appoi.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpage/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/Main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpage/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/login/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpage/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/login/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpage/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/main.css" afterDir="false" />
     </list>
@@ -25,7 +24,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src/main/java" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -36,7 +35,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Rajprince15/Hospital-Management-System.git&quot;,
-    &quot;accountId&quot;: &quot;34a7d775-42fc-4a26-bc0d-4e47926068a9&quot;
+    &quot;accountId&quot;: &quot;fc8af081-2fb5-4913-bd53-a4d936301fc9&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -53,14 +52,17 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.DatabaseUtil.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;&lt;unknown&gt;&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/HSP/untitled&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/mysql-connector-j-9.1.0&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
