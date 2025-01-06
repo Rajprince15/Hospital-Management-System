@@ -1,0 +1,4 @@
+service\PatientServiceTest.class
+service\UserServiceTest.class
+service\DoctorServiceTest.class
+service\AppointmentServiceTest.class

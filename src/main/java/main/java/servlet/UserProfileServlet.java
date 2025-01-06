@@ -2,57 +2,40 @@ package main.java.servlet;
 
 import main.java.entities.User;
 import main.java.service.UserService;
-import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.PrintWriter;
 
-@WebServlet("/api/profile/*")
+@WebServlet("/user/profile")
 public class UserProfileServlet extends HttpServlet {
-    private final UserService userService;
-    private final Gson gson;
+    private UserService userService;
 
-    public UserProfileServlet() {
-        this.userService = new UserService();
-        this.gson = new Gson();
+    @Override
+    public void init() throws ServletException {
+        userService = new UserService();
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("application/json");
-        PrintWriter out = response.getWriter();
-
-        try {
-            // Check if user is logged in
-            HttpSession session = request.getSession(false);
-            if (session == null || session.getAttribute("userId") == null) {
-                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                out.println(gson.toJson("User not logged in"));
-                return;
-            }
-
-            int userId = (Integer) session.getAttribute("userId");
-            User user = userService.getUserById(userId);
-
-            if (user != null) {
-                // Don't send password in response
-                user.setPassword(null);
-                out.println(gson.toJson(user));
-            } else {
-                response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-                out.println(gson.toJson("User not found"));
-            }
-
-        } catch (Exception e) {
-            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            out.println(gson.toJson("Error: " + e.getMessage()));
+        // Assuming user is authenticated and their ID is stored in session
+        Integer userId = (Integer) request.getSession().getAttribute("userId");
+        if (userId == null) {
+            response.sendRedirect(request.getContextPath() + "/login");
+            return;
         }
+
+        User user = userService.getUserById(userId);
+        if (user == null) {
+            response.sendError(HttpServletResponse.SC_NOT_FOUND, "User not found");
+            return;
+        }
+
+        request.setAttribute("user", user);
+        request.getRequestDispatcher("/WEB-INF/views/userProfile.jsp").forward(request, response);
     }
 }

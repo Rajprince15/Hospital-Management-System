@@ -6,25 +6,34 @@ import main.java.entities.Doctor;
 import java.util.List;
 
 public class DoctorService {
+
     private final DoctorDAO doctorDAO;
 
-    // Constructor
     public DoctorService() {
         this.doctorDAO = new DoctorDAO();
     }
 
     // Add a new doctor
     public boolean addDoctor(Doctor doctor) {
+        if (doctor == null || doctor.getName() == null || doctor.getSpecialty() == null) {
+            throw new IllegalArgumentException("Invalid doctor details provided.");
+        }
         return doctorDAO.addDoctor(doctor);
     }
 
-    // Update doctor details
+    // Update an existing doctor's details
     public boolean updateDoctor(Doctor doctor) {
+        if (doctor == null || doctor.getId() <= 0) {
+            throw new IllegalArgumentException("Invalid doctor details provided.");
+        }
         return doctorDAO.updateDoctor(doctor);
     }
 
     // Get doctor by ID
     public Doctor getDoctorById(int id) {
+        if (id <= 0) {
+            throw new IllegalArgumentException("Invalid doctor ID.");
+        }
         return doctorDAO.getDoctorById(id);
     }
 
@@ -35,6 +44,9 @@ public class DoctorService {
 
     // Delete doctor by ID
     public boolean deleteDoctor(int id) {
+        if (id <= 0) {
+            throw new IllegalArgumentException("Invalid doctor ID.");
+        }
         return doctorDAO.deleteDoctor(id);
     }
 }

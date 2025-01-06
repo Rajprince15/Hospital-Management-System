@@ -13,19 +13,27 @@ public class DoctorDAO {
     public boolean addDoctor(Doctor doctor) {
         String sql = "INSERT INTO doctors (name, specialty, contact) VALUES (?, ?, ?)";
         try (Connection connection = DatabaseUtil.getConnection();
-             PreparedStatement statement = connection.prepareStatement(sql)) {
+             PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
 
             statement.setString(1, doctor.getName());
             statement.setString(2, doctor.getSpecialty());
             statement.setString(3, doctor.getContact());
+            int affectedRows = statement.executeUpdate();
 
-            int rowsAffected = statement.executeUpdate();
-            return rowsAffected > 0;
+            if (affectedRows > 0) {
+                try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
+                    if (generatedKeys.next()) {
+                        doctor.setId(generatedKeys.getInt(1)); // Set the generated ID
+                    }
+                }
+            }
+            return affectedRows > 0;
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
         }
     }
+
 
     // Update doctor details
     public boolean updateDoctor(Doctor doctor) {
@@ -37,9 +45,7 @@ public class DoctorDAO {
             statement.setString(2, doctor.getSpecialty());
             statement.setString(3, doctor.getContact());
             statement.setInt(4, doctor.getId());
-
-            int rowsAffected = statement.executeUpdate();
-            return rowsAffected > 0;
+            return statement.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
@@ -53,15 +59,10 @@ public class DoctorDAO {
              PreparedStatement statement = connection.prepareStatement(sql)) {
 
             statement.setInt(1, id);
-            ResultSet resultSet = statement.executeQuery();
-
-            if (resultSet.next()) {
-                return new Doctor(
-                        resultSet.getInt("id"),
-                        resultSet.getString("name"),
-                        resultSet.getString("specialty"),
-                        resultSet.getString("contact")
-                );
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (resultSet.next()) {
+                    return mapRowToDoctor(resultSet);
+                }
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -78,12 +79,7 @@ public class DoctorDAO {
              ResultSet resultSet = statement.executeQuery()) {
 
             while (resultSet.next()) {
-                doctors.add(new Doctor(
-                        resultSet.getInt("id"),
-                        resultSet.getString("name"),
-                        resultSet.getString("specialty"),
-                        resultSet.getString("contact")
-                ));
+                doctors.add(mapRowToDoctor(resultSet));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -98,11 +94,20 @@ public class DoctorDAO {
              PreparedStatement statement = connection.prepareStatement(sql)) {
 
             statement.setInt(1, id);
-            int rowsAffected = statement.executeUpdate();
-            return rowsAffected > 0;
+            return statement.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
         }
+    }
+
+    // Utility: Map ResultSet row to Doctor object
+    private Doctor mapRowToDoctor(ResultSet resultSet) throws SQLException {
+        return new Doctor(
+                resultSet.getInt("id"),
+                resultSet.getString("name"),
+                resultSet.getString("specialty"),
+                resultSet.getString("contact")
+        );
     }
 }
