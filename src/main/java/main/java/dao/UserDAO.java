@@ -116,6 +116,24 @@ public class UserDAO {
         return null;
     }
 
+    // Get a user by email
+    public User getUserByEmail(String email) {
+        String sql = "SELECT * FROM users WHERE email = ?";
+        try (Connection connection = DatabaseUtil.getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+
+            statement.setString(1, email);
+            ResultSet resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+                return extractUserFromResultSet(resultSet);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     // Get all users
     public List<User> getAllUsers() {
         String sql = "SELECT * FROM users";

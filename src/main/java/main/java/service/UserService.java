@@ -58,6 +58,26 @@ public class UserService {
         return null;
     }
 
+    // Authenticates a user by email and password
+    public User authenticateUserByEmail(String email, String password) {
+        User user = userDAO.getUserByEmail(email);
+        if (user != null && user.getPassword().equals(password)) {
+            // Implement hashed password comparison in production
+            return user;
+        }
+        System.err.println("Authentication failed for email: " + email);
+        return null;
+    }
+
+    // Retrieves a user by their email
+    public User getUserByEmail(String email) {
+        User user = userDAO.getUserByEmail(email);
+        if (user == null) {
+            System.err.println("User not found with email: " + email);
+        }
+        return user;
+    }
+
     // Retrieves a user by their ID
     public User getUserById(int id) {
         User user = userDAO.getUserById(id);
