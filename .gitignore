@@ -32,3 +32,4 @@ bin/
 ### Mac OS ###
 .DS_Store
 /src/main/java/out/production/Hospital Management System/main/
+.env
