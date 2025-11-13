@@ -10,142 +10,142 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="login.css">
+  <script src="../js/api.js"></script>
 
   <!-- Boxicons CSS -->
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-  <nav  style="display: flex; align-items: center; justify-content: space-between; background-color: white; padding: 10px; box-sizing: border-box;">
+<nav  style="display: flex; align-items: center; justify-content: space-between; background-color: white; padding: 10px; box-sizing: border-box;">
     <span style="display: inline-flex; ">
       <img src="https://i.pinimg.com/564x/d2/9e/b9/d29eb99cbe1e1e181a7551ec6416743e.jpg"
-          alt="img" style="mix-blend-mode: multiply; max-width: 20px; vertical-align: middle;" />
+           alt="img" style="mix-blend-mode: multiply; max-width: 20px; vertical-align: middle;" />
       <span style="font-size: 20px; font-weight: bold; margin-left: 10px; vertical-align: middle; background: linear-gradient(to right, blue, green); -webkit-background-clip: text; color: transparent;">
         Elite Care
       </span>
     </span>
 
-    <button class="nav-toggle">
-      <i class="fa fa-bars"></i>
-    </button>
-    <ul class="ul">
-      <li><a href="D:\HSP\Hospital Management System\webpage\Main.html#home">Home</a></li>
-      <li><a href="D:\HSP\Hospital Management System\webpage\Main.html#about">About</a></li>
-      <li><a href="D:\HSP\Hospital Management System\webpage\Main.html#facilities">Services</a></li>
-
-    </ul>
-  </nav>
-  <section class="container forms">
-    <div class="form login">
-      <div class="form-content">
-        <header>Login</header>
-        <form action="#" id="loginForm">
-          <div class="field input-field">
-            <input type="email" placeholder="ID" class="input" id="loginEmail">
-            <span class="error" id="loginEmailError"></span>
-          </div>
-
-          <div class="field input-field">
-            <input type="password" placeholder="Password" class="password" id="loginPassword">
-            <i class='bx bx-hide eye-icon'></i>
-            <span class="error" id="loginPasswordError"></span>
-          </div>
-
-          <div class="field button-field">
-            <a href="Main.html"><button type="submit">Login</button></a>
-          </div>
-        </form>
-
-        <div class="form-link">
-          <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
+  <button class="nav-toggle">
+    <i class="fa fa-bars"></i>
+  </button>
+  <ul class="ul">
+    <li><a href="../Main.html#home">Home</a></li>
+    <li><a href="../Main.html#about">About</a></li>
+    <li><a href="../Main.html#facilities">Services</a></li>
+  </ul>
+</nav>
+<section class="container forms">
+  <div class="form login">
+    <div class="form-content">
+      <header>Login</header>
+      <form action="#" id="loginForm">
+        <div class="field input-field">
+          <input type="email" placeholder="ID" class="input" id="loginEmail">
+          <span class="error" id="loginEmailError"></span>
         </div>
+
+        <div class="field input-field">
+          <input type="password" placeholder="Password" class="password" id="loginPassword">
+          <i class='bx bx-hide eye-icon'></i>
+          <span class="error" id="loginPasswordError"></span>
+        </div>
+
+        <div class="field button-field">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+
+      <div class="form-link">
+        <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
       </div>
-
-      <div class="line"></div>
-
-      <div class="media-options">
-        <a href="#" class="field facebook">
-          <i class='bx bxl-facebook facebook-icon'></i>
-          <span>Login with Facebook</span>
-        </a>
-      </div>
-
-      <div class="media-options">
-        <a href="#" class="field google">
-          <i class='bx bxl-google' id="google"></i>
-          <span>Login with Google</span>
-        </a>
-      </div>
-
     </div>
 
-    <!-- Signup Form -->
+    <div class="line"></div>
 
-    <div class="form signup">
-      <div class="form-content">
-        <header>Signup</header>
-        <form action="#" id="signupForm">
-          <div class="field input-field">
-            <input type="email" placeholder="Email" class="input" id="signupEmail">
-            <span class="error" id="signupEmailError"></span>
-          </div>
-
-          <div class="field input-field">
-            <input type="password" placeholder="Create password" class="password" id="signupPassword">
-            <span class="error" id="signupPasswordError"></span>
-          </div>
-
-          <div class="field input-field">
-            <input type="password" placeholder="Confirm password" class="password" id="confirmPassword">
-            <i class='bx bx-hide eye-icon'></i>
-            <span class="error" id="confirmPasswordError"></span>
-          </div>
-
-          <div class="field button-field">
-            <a href="Main.html"><button>Signup</button></a>
-          </div>
-        </form>
-
-        <div class="form-link">
-          <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
-        </div>
-      </div>
-
-      <div class="line"></div>
-
-      <div class="media-options">
-        <a href="#" class="field facebook">
-          <i class='bx bxl-facebook facebook-icon'></i>
-          <span>Login with Facebook</span>
-        </a>
-      </div>
-
-      <div class="media-options">
-        <a href="#" class="field google">
-          <i class='bx bxl-google' id="google-icon"></i>
-          <span>Login with Google</span>
-        </a>
-      </div>
-
+    <div class="media-options">
+      <a href="#" class="field facebook">
+        <i class='bx bxl-facebook facebook-icon'></i>
+        <span>Login with Facebook</span>
+      </a>
     </div>
-  </section>
+
+    <div class="media-options">
+      <a href="#" class="field google">
+        <i class='bx bxl-google' id="google"></i>
+        <span>Login with Google</span>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Signup Form -->
+
+  <div class="form signup">
+    <div class="form-content">
+      <header>Signup</header>
+      <form action="#" id="signupForm">
+        <div class="field input-field">
+          <input type="email" placeholder="Email" class="input" id="signupEmail">
+          <span class="error" id="signupEmailError"></span>
+        </div>
+
+        <div class="field input-field">
+          <input type="password" placeholder="Create password" class="password" id="signupPassword">
+          <span class="error" id="signupPasswordError"></span>
+        </div>
+
+        <div class="field input-field">
+          <input type="password" placeholder="Confirm password" class="password" id="confirmPassword">
+          <i class='bx bx-hide eye-icon'></i>
+          <span class="error" id="confirmPasswordError"></span>
+        </div>
+
+        <div class="field button-field">
+          <button type="submit">Signup</button>
+        </div>
+      </form>
+
+      <div class="form-link">
+        <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="media-options">
+      <a href="#" class="field facebook">
+        <i class='bx bxl-facebook facebook-icon'></i>
+        <span>Login with Facebook</span>
+      </a>
+    </div>
+
+    <div class="media-options">
+      <a href="#" class="field google">
+        <i class='bx bxl-google' id="google-icon"></i>
+        <span>Login with Google</span>
+      </a>
+    </div>
+
+  </div>
+</section>
 
 
 
-  <script>
-    const navToggle = document.querySelector(".nav-toggle");
-    const navMenu = document.querySelector(".ul");
+<script>
+  const navToggle = document.querySelector(".nav-toggle");
+  const navMenu = document.querySelector(".ul");
 
-    navToggle.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-    });
-  </script>
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+</script>
 
-  <!-- JavaScript -->
-  <script src="validation.js"></script>
+<!-- JavaScript -->
+<script src="auth.js"></script>
 </body>
 
 </html>

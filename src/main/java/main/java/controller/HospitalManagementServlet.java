@@ -29,8 +29,11 @@ public class HospitalManagementServlet extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        // Add CORS headers
+        addCorsHeaders(response);
+
         String pathInfo = request.getPathInfo();
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
@@ -94,8 +97,11 @@ public class HospitalManagementServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        // Add CORS headers
+        addCorsHeaders(response);
+
         String pathInfo = request.getPathInfo();
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
@@ -126,10 +132,10 @@ public class HospitalManagementServlet extends HttpServlet {
                 case "appointments":
                     Appointment appointment = gson.fromJson(requestBody, Appointment.class);
                     boolean appointmentAdded = appointmentController.scheduleAppointment(
-                        appointment.getPatientId(),
-                        appointment.getDoctorId(),
-                        appointment.getAppointmentDate(),
-                        appointment.getStatus()
+                            appointment.getPatientId(),
+                            appointment.getDoctorId(),
+                            appointment.getAppointmentDate(),
+                            appointment.getStatus()
                     );
                     out.println(gson.toJson(appointmentAdded));
                     break;
@@ -137,9 +143,9 @@ public class HospitalManagementServlet extends HttpServlet {
                 case "bills":
                     Billing billing = gson.fromJson(requestBody, Billing.class);
                     boolean billAdded = billingController.addBill(
-                        billing.getPatientId(),
-                        billing.getAmount(),
-                        billing.getBillDate()
+                            billing.getPatientId(),
+                            billing.getAmount(),
+                            billing.getBillDate()
                     );
                     out.println(gson.toJson(billAdded));
                     break;
@@ -151,5 +157,20 @@ public class HospitalManagementServlet extends HttpServlet {
             response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             out.println(gson.toJson("Error: " + e.getMessage()));
         }
+    }
+
+    @Override
+    protected void doOptions(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // Handle preflight CORS requests
+        addCorsHeaders(response);
+        response.setStatus(HttpServletResponse.SC_OK);
+    }
+
+    private void addCorsHeaders(HttpServletResponse response) {
+        response.setHeader("Access-Control-Allow-Origin", "*");
+        response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+        response.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+        response.setHeader("Access-Control-Max-Age", "3600");
     }
 }
