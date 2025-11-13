@@ -5,47 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b280ce14-dd34-4e98-a5f4-c7ed82006582" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/admin/dashboard.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/admin/doctors.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/admin/patients.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/admin/users.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/common/appointments.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/common/editProfile.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/common/header.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/common/profile.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/doctor/dashboard.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/patient/dashboard.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/assets/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controller/AppointmentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controller/AppointmentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controller/BillingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controller/BillingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controller/DoctorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controller/DoctorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controller/HospitalManagementServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controller/HospitalManagementServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controller/PatientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controller/PatientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/dao/AppointmentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/dao/AppointmentDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/dao/BillingDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/dao/BillingDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/dao/DoctorDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/dao/DoctorDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/dao/PatientDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/dao/PatientDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/dao/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/entities/Appointment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/entities/Appointment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/entities/Billing.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/entities/Billing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/entities/Doctor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/entities/Doctor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/entities/Patient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/entities/Patient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/service/AppointmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/service/AppointmentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/service/BillingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/service/BillingService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/service/DoctorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/service/DoctorService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/service/PatientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/service/PatientService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/servlet/UserProfileServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/servlet/UserProfileServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/servlet/UserRegistrationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/servlet/UserRegistrationServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/util/DatabaseUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/util/DatabaseUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/AppointmentServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/service/AppointmentServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/DoctorServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/service/DoctorServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/PatientServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/service/PatientServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/UserServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/service/UserServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
