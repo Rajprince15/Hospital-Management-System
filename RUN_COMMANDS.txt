@@ -1,0 +1,91 @@
+==========================================
+Hospital Management System - Run Commands
+==========================================
+
+STEP 1: Build Backend (Skip Tests)
+-----------------------------------
+cd "D:\HSP\Hospital Management System"
+mvn clean package -DskipTests
+
+
+STEP 2: Deploy WAR to Tomcat
+------------------------------
+copy "target\hospital-management-system.war" "$env:TOMCAT_HOME\webapps\"
+
+(Or manually copy the WAR file into:)
+C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\
+
+
+STEP 3: Start Tomcat Server
+-----------------------------
+& "$env:TOMCAT_HOME\bin\startup.bat"
+
+To STOP Tomcat:
+& "$env:TOMCAT_HOME\bin\shutdown.bat"
+
+
+STEP 4: Verify Backend is Running
+----------------------------------
+Open browser:
+http://localhost:2525/hospital-management-system/api/doctors
+
+Expected: JSON list of doctors
+
+
+STEP 5: Start Frontend Server
+------------------------------
+cd "D:\HSP\Hospital Management System"
+node serve-webpage.js
+
+
+STEP 6: Open the Application
+------------------------------
+Frontend Main Page:
+http://localhost:3000/Main.html
+
+Login Page:
+http://localhost:3000/login/login.html
+
+Appointment Page:
+http://localhost:3000/Appoi/Appoi.html
+
+
+==========================================
+TROUBLESHOOTING
+==========================================
+
+If Maven build fails:
+----------------------
+mvn clean package -DskipTests
+
+
+If Tomcat is not found:
+------------------------
+Check environment variable:
+echo $env:TOMCAT_HOME
+
+Correct value:
+C:\Program Files\Apache Software Foundation\Tomcat 9.0
+
+
+If port 2525 is not responding:
+-------------------------------
+Check Tomcat server.xml:
+<Connector port="2525" protocol="HTTP/1.1" />
+
+Restart Tomcat.
+
+
+If frontend won't start:
+-------------------------
+Make sure Node.js is installed:
+node --version
+
+
+Check for errors in terminal or browser console (F12).
+
+
+==========================================
+QUICK BUILD COMMAND
+==========================================
+mvn clean package -DskipTests && echo Build Complete! Check target folder.

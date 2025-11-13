@@ -1,5 +1,5 @@
 // API Configuration
-const API_BASE_URL = window.location.origin;
+const API_BASE_URL = 'http://localhost:2525/hospital-management-system';
 
 // API Helper Functions
 const API = {
@@ -158,5 +158,5 @@ const API = {
     }
 };
 
-// Export for use in other scripts
+// Export for use in other scriptsecho $env:TOMCAT_HOME
 window.API = API;

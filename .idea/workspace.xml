@@ -4,7 +4,56 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b280ce14-dd34-4e98-a5f4-c7ed82006582" name="Changes" comment="" />
+    <list default="true" id="b280ce14-dd34-4e98-a5f4-c7ed82006582" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BUILD.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RUN_COMMANDS.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SETUP_INSTRUCTIONS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build-and-run.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-configuration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controller/AppointmentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controller/BillingController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controller/DoctorController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controller/HospitalManagementServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controller/PatientController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/dao/AppointmentDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/dao/BillingDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/dao/DoctorDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/dao/PatientDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/dao/UserDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/entities/Appointment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/entities/Billing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/entities/Doctor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/entities/Patient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/entities/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/service/AppointmentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/service/BillingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/service/DoctorService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/service/PatientService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/servlet/UserProfileServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/servlet/UserRegistrationServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/util/DatabaseUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2025-11-14T04-21-23_168.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-service.AppointmentServiceTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-service.DoctorServiceTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-service.PatientServiceTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-service.UserServiceTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/service.AppointmentServiceTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/service.DoctorServiceTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/service.PatientServiceTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/service.UserServiceTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/service/AppointmentServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/service/DoctorServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/service/PatientServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/service/UserServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test-db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/js/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/js/api.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,6 +108,7 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "bazel.project.detector.is.bazel.project": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/HSP/Hospital Management System",
