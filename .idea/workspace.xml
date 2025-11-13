@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b280ce14-dd34-4e98-a5f4-c7ed82006582" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/webpage/Appoi/appointment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpage/js/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpage/js/doctors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpage/login/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpage/Appoi/Appoi.html" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/Appoi/Appoi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpage/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/Main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpage/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/login/login.html" afterDir="false" />
-    </list>
+    <list default="true" id="b280ce14-dd34-4e98-a5f4-c7ed82006582" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +61,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/HSP/Hospital Management System/webpage/login",
+    "last_opened_file_path": "D:/HSP/Hospital Management System",
     "project.structure.last.edited": "Facets",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -79,6 +70,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\HSP\Hospital Management System" />
       <recent name="D:\HSP\Hospital Management System\webpage\login" />
       <recent name="D:\HSP\Hospital Management System\webpage\Appoi" />
       <recent name="D:\HSP\Hospital Management System\webpage\js" />
