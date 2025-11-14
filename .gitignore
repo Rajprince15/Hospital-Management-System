@@ -5,7 +5,8 @@ out/
 
 
 
-src/main/java/main/java/util/
+
+/target/
 
 ### Eclipse ###
 .apt_generated
