@@ -89,3 +89,146 @@ Check for errors in terminal or browser console (F12).
 QUICK BUILD COMMAND
 ==========================================
 mvn clean package -DskipTests && echo Build Complete! Check target folder.
+
+
+
+
+
+📋 Complete API Endpoints List for Postman
+Base URL: http://localhost:2525/hospital-management-system
+🔐 Authentication APIs
+1. Register User (Signup)
+Method: POST
+URL: http://localhost:2525/hospital-management-system/user/register-patient
+Body Type: form-data
+Fields:
+username: test@example.com
+password: test123456
+email: test@example.com
+fullName: Test User
+phoneNumber: +1-555-1234
+address: 123 Test Street
+2. Login
+Method: POST
+URL: http://localhost:2525/hospital-management-system/auth/login
+Body Type: form-data
+Fields:
+username: test@example.com
+password: test123456
+3. Logout
+Method: POST
+URL: http://localhost:2525/hospital-management-system/auth/logout
+Body Type: None
+👨‍⚕️ Doctor APIs
+4. Get All Doctors
+Method: GET
+URL: http://localhost:2525/hospital-management-system/api/doctors
+5. Get Doctor by ID
+Method: GET
+URL: http://localhost:2525/hospital-management-system/api/doctors/1 (Replace 1 with actual doctor ID)
+6. Add New Doctor
+Method: POST
+URL: http://localhost:2525/hospital-management-system/api/doctors
+Body Type: JSON (raw)
+JSON Body:
+{
+  "name": "Dr. John Smith",
+  "specialty": "Cardiology",
+  "contact": "+1-555-9999"
+}
+🏥 Patient APIs
+7. Get All Patients
+Method: GET
+URL: http://localhost:2525/hospital-management-system/api/patients
+8. Get Patient by ID
+Method: GET
+URL: http://localhost:2525/hospital-management-system/api/patients/1 (Replace 1 with actual patient ID)
+9. Add New Patient
+Method: POST
+URL: http://localhost:2525/hospital-management-system/api/patients
+Body Type: JSON (raw)
+JSON Body:
+{
+  "name": "Jane Doe",
+  "contact": "+1-555-8888",
+  "address": "456 Oak Avenue"
+}
+📅 Appointment APIs
+10. Get All Appointments
+Method: GET
+URL: http://localhost:2525/hospital-management-system/api/appointments
+11. Get Appointment by ID
+Method: GET
+URL: http://localhost:2525/hospital-management-system/api/appointments/1 (Replace 1 with actual appointment ID)
+12. Schedule Appointment
+Method: POST
+URL: http://localhost:2525/hospital-management-system/api/appointments
+Body Type: JSON (raw)
+JSON Body:
+{
+  "patientId": 1,
+  "doctorId": 1,
+  "appointmentDate": "2025-12-01",
+  "status": "Scheduled"
+}
+💰 Billing APIs
+13. Get All Bills
+Method: GET
+URL: http://localhost:2525/hospital-management-system/api/bills
+14. Get Bill by ID
+Method: GET
+URL: http://localhost:2525/hospital-management-system/api/bills/1 (Replace 1 with actual bill ID)
+15. Add New Bill
+Method: POST
+URL: http://localhost:2525/hospital-management-system/api/bills
+Body Type: JSON (raw)
+JSON Body:
+{
+  "patientId": 1,
+  "amount": 150.00,
+  "billDate": "2025-11-20"
+}
+🔥 Quick Copy-Paste List
+GET    http://localhost:2525/hospital-management-system/api/doctors
+GET    http://localhost:2525/hospital-management-system/api/doctors/1
+POST   http://localhost:2525/hospital-management-system/api/doctors
+
+GET    http://localhost:2525/hospital-management-system/api/patients
+GET    http://localhost:2525/hospital-management-system/api/patients/1
+POST   http://localhost:2525/hospital-management-system/api/patients
+
+GET    http://localhost:2525/hospital-management-system/api/appointments
+GET    http://localhost:2525/hospital-management-system/api/appointments/1
+POST   http://localhost:2525/hospital-management-system/api/appointments
+
+GET    http://localhost:2525/hospital-management-system/api/bills
+GET    http://localhost:2525/hospital-management-system/api/bills/1
+POST   http://localhost:2525/hospital-management-system/api/bills
+
+POST   http://localhost:2525/hospital-management-system/user/register-patient
+POST   http://localhost:2525/hospital-management-system/auth/login
+POST   http://localhost:2525/hospital-management-system/auth/logout
+✅ Testing Order (Recommended)
+Test in this sequence:
+
+GET /api/doctors - Verify backend is running
+POST /user/register-patient - Test signup
+POST /auth/login - Test login
+GET /api/patients - Test data retrieval
+POST /api/appointments - Test data creation
+📝 Important Notes:
+For POST requests with form-data (Register & Login):
+
+Select "Body" tab
+Choose "form-data" radio button
+Add key-value pairs
+For POST requests with JSON (Doctors, Patients, Appointments, Bills):
+
+Select "Body" tab
+Choose "raw" radio button
+Select "JSON" from dropdown
+Paste JSON body
+Headers (automatically added by Postman):
+
+For form-data: Content-Type: multipart/form-data
+For JSON: Content-Type: application/json

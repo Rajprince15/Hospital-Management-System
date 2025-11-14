@@ -4,23 +4,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const signupForm = document.getElementById('signupForm');
     const loginLink = document.querySelector('.login-link');
     const signupLink = document.querySelector('.signup-link');
-    const loginFormContainer = document.querySelector('.form.login');
-    const signupFormContainer = document.querySelector('.form.signup');
+    const formsContainer = document.querySelector('.container.forms');
 
-    // Form switching
+    // Form switching - Fixed to use CSS classes properly
     if (signupLink) {
         signupLink.addEventListener('click', (e) => {
             e.preventDefault();
-            loginFormContainer.style.display = 'none';
-            signupFormContainer.style.display = 'block';
+            formsContainer.classList.add('show-signup');
         });
     }
 
     if (loginLink) {
         loginLink.addEventListener('click', (e) => {
             e.preventDefault();
-            signupFormContainer.style.display = 'none';
-            loginFormContainer.style.display = 'block';
+            formsContainer.classList.remove('show-signup');
         });
     }
 
@@ -29,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     eyeIcons.forEach(icon => {
         icon.addEventListener('click', () => {
             const passwordField = icon.previousElementSibling;
-            
+
             if (passwordField.type === 'password') {
                 passwordField.type = 'text';
                 icon.classList.replace('bx-hide', 'bx-show');
@@ -44,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (loginForm) {
         loginForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-            
+
             // Clear previous errors
             clearErrors();
 
@@ -70,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const submitButton = loginForm.querySelector('button[type="submit"]');
             const originalText = submitButton.textContent;
             submitButton.disabled = true;
-            submitButton.textContent = 'Logging in...';
+            submitButton.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Logging in...';
 
             try {
                 // Call API
@@ -78,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (result.success) {
                     showMessage('Login successful! Redirecting...', 'success');
-                    
+
                     setTimeout(() => {
                         window.location.href = '../Main.html';
                     }, 1000);
@@ -90,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 showError('loginPasswordError', 'An error occurred. Please try again.');
             } finally {
                 submitButton.disabled = false;
-                submitButton.textContent = originalText;
+                submitButton.innerHTML = originalText;
             }
         });
     }
@@ -99,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (signupForm) {
         signupForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-            
+
             // Clear previous errors
             clearErrors();
 
@@ -156,9 +153,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Show loading
             const submitButton = signupForm.querySelector('button');
-            const originalText = submitButton.textContent;
+            const originalText = submitButton.innerHTML;
             submitButton.disabled = true;
-            submitButton.textContent = 'Creating account...';
+            submitButton.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Creating account...';
 
             try {
                 // Prepare registration data
@@ -179,8 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     // Switch to login form
                     setTimeout(() => {
-                        signupFormContainer.style.display = 'none';
-                        loginFormContainer.style.display = 'block';
+                        formsContainer.classList.remove('show-signup');
                         signupForm.reset();
                     }, 4000);
                 } else {
@@ -191,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 showError('signupEmailError', 'An error occurred. Please try again.');
             } finally {
                 submitButton.disabled = false;
-                submitButton.textContent = originalText;
+                submitButton.innerHTML = originalText;
             }
         });
     }
@@ -227,27 +223,39 @@ function showMessage(message, type) {
     // Create message element
     const messageBox = document.createElement('div');
     messageBox.className = `message-box ${type}`;
+
+    const icon = type === 'success' ? '<i class="bx bx-check-circle"></i>' : '<i class="bx bx-error-circle"></i>';
+
+    messageBox.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 10px;">
+            ${icon}
+            <span>${message}</span>
+        </div>
+    `;
+
     messageBox.style.cssText = `
         position: fixed;
         top: 20px;
         right: 20px;
-        padding: 15px 25px;
-        border-radius: 5px;
+        padding: 16px 24px;
+        border-radius: 12px;
         z-index: 9999;
         font-weight: 500;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        animation: slideIn 0.3s ease-out;
-        max-width: 400px;
-        ${type === 'success' ? 'background-color: #10b981; color: white;' : 'background-color: #ef4444; color: white;'}
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        animation: slideIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        max-width: 450px;
+        font-size: 14px;
+        ${type === 'success' ?
+            'background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white;' :
+            'background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white;'}
     `;
-    messageBox.textContent = message;
 
     // Add animation
     const style = document.createElement('style');
     style.textContent = `
         @keyframes slideIn {
             from {
-                transform: translateX(100%);
+                transform: translateX(120%);
                 opacity: 0;
             }
             to {
@@ -255,14 +263,30 @@ function showMessage(message, type) {
                 opacity: 1;
             }
         }
+        @keyframes slideOut {
+            from {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(120%) scale(0.9);
+                opacity: 0;
+            }
+        }
+        .message-box i {
+            font-size: 24px;
+        }
     `;
-    document.head.appendChild(style);
+    if (!document.getElementById('message-animations')) {
+        style.id = 'message-animations';
+        document.head.appendChild(style);
+    }
 
     document.body.appendChild(messageBox);
 
     // Auto remove after 5 seconds
     setTimeout(() => {
-        messageBox.style.animation = 'slideIn 0.3s ease-out reverse';
+        messageBox.style.animation = 'slideOut 0.3s ease-out forwards';
         setTimeout(() => messageBox.remove(), 300);
     }, 5000);
 }
