@@ -51,6 +51,12 @@ public class HospitalManagementServlet extends HttpServlet {
             }
 
             switch (paths[1]) {
+                case "test":
+                    // Test endpoint to verify API is working
+                    response.setStatus(HttpServletResponse.SC_OK);
+                    out.println(gson.toJson(new TestResponse("success", "Hospital Management System API is working!", System.currentTimeMillis())));
+                    break;
+
                 case "patients":
                     if (paths.length == 2) {
                         out.println(gson.toJson(patientController.getAllPatients()));
@@ -172,5 +178,30 @@ public class HospitalManagementServlet extends HttpServlet {
         response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
         response.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
         response.setHeader("Access-Control-Max-Age", "3600");
+    }
+
+    // Inner class for test response
+    private static class TestResponse {
+        private final String status;
+        private final String message;
+        private final long timestamp;
+
+        public TestResponse(String status, String message, long timestamp) {
+            this.status = status;
+            this.message = message;
+            this.timestamp = timestamp;
+        }
+
+        public String getStatus() {
+            return status;
+        }
+
+        public String getMessage() {
+            return message;
+        }
+
+        public long getTimestamp() {
+            return timestamp;
+        }
     }
 }
