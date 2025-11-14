@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b280ce14-dd34-4e98-a5f4-c7ed82006582" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/Appoi/Appoi.html" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/Appoi/Appoi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/Appoi/appointment.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/Appoi/appointment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/js/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/js/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/login/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/login/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/login/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,30 +54,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.DatabaseUtil.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.AppointmentServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PatientServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;bazel.project.detector.is.bazel.project&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/HSP/Hospital Management System&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.externalResources&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DatabaseUtil.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.AppointmentServiceTest.executor": "Run",
+    "JUnit.PatientServiceTest.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "bazel.project.detector.is.bazel.project": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/HSP/Hospital Management System/src/main/java/main/java/servlet",
+    "project.structure.last.edited": "Facets",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.externalResources"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\HSP\Hospital Management System\src\main\java\main\java\servlet" />
       <recent name="D:\HSP\Hospital Management System" />
       <recent name="D:\HSP\Hospital Management System\webpage\login" />
       <recent name="D:\HSP\Hospital Management System\webpage\Appoi" />

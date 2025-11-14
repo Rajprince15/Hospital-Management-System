@@ -86,11 +86,26 @@
 
   <div class="form signup">
     <div class="form-content">
-      <header>Signup</header>
+      <header>Signup as Patient</header>
       <form action="#" id="signupForm">
+        <div class="field input-field">
+          <input type="text" placeholder="Full Name" class="input" id="signupFullName">
+          <span class="error" id="signupFullNameError"></span>
+        </div>
+
         <div class="field input-field">
           <input type="email" placeholder="Email" class="input" id="signupEmail">
           <span class="error" id="signupEmailError"></span>
+        </div>
+
+        <div class="field input-field">
+          <input type="tel" placeholder="Phone Number" class="input" id="signupPhone">
+          <span class="error" id="signupPhoneError"></span>
+        </div>
+
+        <div class="field input-field">
+          <input type="text" placeholder="Address" class="input" id="signupAddress">
+          <span class="error" id="signupAddressError"></span>
         </div>
 
         <div class="field input-field">

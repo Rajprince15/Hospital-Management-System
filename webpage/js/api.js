@@ -105,12 +105,19 @@ const API = {
                 body: formData
             });
 
-            if (response.redirected) {
-                window.location.href = response.url;
-                return { success: true };
+            const data = await response.json();
+
+            if (response.ok && data.success) {
+                // Store user info in sessionStorage
+                if (data.user) {
+                    sessionStorage.setItem('user', JSON.stringify(data.user));
+                    sessionStorage.setItem('userId', data.user.id);
+                    sessionStorage.setItem('username', data.user.username);
+                }
+                return { success: true, user: data.user };
             }
 
-            return { success: false, error: 'Login failed' };
+            return { success: false, error: data.message || 'Login failed' };
         } catch (error) {
             console.error('Login Error:', error);
             return { success: false, error: error.message };
@@ -134,6 +141,31 @@ const API = {
             }
 
             return { success: false, error: 'Registration failed' };
+        } catch (error) {
+            console.error('Registration Error:', error);
+            return { success: false, error: error.message };
+        }
+    },
+
+    async registerPatient(userData) {
+        const formData = new FormData();
+        Object.keys(userData).forEach(key => {
+            formData.append(key, userData[key]);
+        });
+
+        try {
+            const response = await fetch(`${API_BASE_URL}/user/register-patient`, {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (response.ok && data.success) {
+                return { success: true, patientId: data.patientId, message: data.message };
+            }
+
+            return { success: false, error: data.message || 'Registration failed' };
         } catch (error) {
             console.error('Registration Error:', error);
             return { success: false, error: error.message };

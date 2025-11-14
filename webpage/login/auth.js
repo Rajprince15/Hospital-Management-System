@@ -103,18 +103,36 @@ document.addEventListener('DOMContentLoaded', function() {
             // Clear previous errors
             clearErrors();
 
+            const fullName = document.getElementById('signupFullName').value.trim();
             const email = document.getElementById('signupEmail').value.trim();
+            const phone = document.getElementById('signupPhone').value.trim();
+            const address = document.getElementById('signupAddress').value.trim();
             const password = document.getElementById('signupPassword').value;
             const confirmPassword = document.getElementById('confirmPassword').value;
 
             // Validation
             let isValid = true;
 
+            if (!fullName) {
+                showError('signupFullNameError', 'Full name is required');
+                isValid = false;
+            }
+
             if (!email) {
                 showError('signupEmailError', 'Email is required');
                 isValid = false;
             } else if (!isValidEmail(email)) {
                 showError('signupEmailError', 'Please enter a valid email');
+                isValid = false;
+            }
+
+            if (!phone) {
+                showError('signupPhoneError', 'Phone number is required');
+                isValid = false;
+            }
+
+            if (!address) {
+                showError('signupAddressError', 'Address is required');
                 isValid = false;
             }
 
@@ -148,27 +166,25 @@ document.addEventListener('DOMContentLoaded', function() {
                     username: email,
                     password: password,
                     email: email,
-                    fullName: email.split('@')[0], // Use email prefix as name
-                    role: 'PATIENT',
-                    associatedId: 0,
-                    phoneNumber: '',
-                    address: ''
+                    fullName: fullName,
+                    phoneNumber: phone,
+                    address: address
                 };
 
                 // Call API
-                const result = await API.register(userData);
+                const result = await API.registerPatient(userData);
 
                 if (result.success) {
-                    showMessage('Account created successfully! Please login.', 'success');
-                    
+                    showMessage(`Account created successfully! Your Patient ID is: ${result.patientId}. Please save this for booking appointments.`, 'success');
+
                     // Switch to login form
                     setTimeout(() => {
                         signupFormContainer.style.display = 'none';
                         loginFormContainer.style.display = 'block';
                         signupForm.reset();
-                    }, 2000);
+                    }, 4000);
                 } else {
-                    showError('signupEmailError', 'Registration failed. Email may already exist.');
+                    showError('signupEmailError', result.error || 'Registration failed. Email may already exist.');
                 }
             } catch (error) {
                 console.error('Registration Error:', error);
